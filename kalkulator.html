@@ -1,0 +1,187 @@
+<html> 
+	<head>
+	<style>
+.kop{
+background-color: #787878;
+padding: 10px;
+color: black;
+font-size: 25px;
+}
+
+
+.header {
+	background-color : black ;
+	color : white ;
+	height : 90px ;
+	font-family: arial black;
+}
+
+.header-logo1 {
+	float: left;
+	padding: 8px 30px;
+}
+
+.header-logo2:hover {
+	background-color: white;
+	color: black;
+}
+.header-list li:hover {
+	  background-color: black; 
+	  color: white;
+}
+.header li {
+	background-color :white ;
+	float: left;
+	margin :23px ;
+	border-radius : 15px 15px 15px 15px ;
+	display : block ;
+	position : relative ;
+	padding: 10px 10px;
+	padding-left : 10px ;
+	color : black;
+	border : 2px solid black ;
+}
+a {
+color:inherit;
+text-decoration: none;
+}
+.footer {
+	background-color: #787878;
+	padding: 10px;
+	color: black;
+	font-size: 25px;
+	text-align: center;
+}
+</style>
+<meta charset="utf-8">
+		<title>Aroy Cafe</title>	 
+	</head>
+	<body>
+	<div class="kop">
+			<marquee direction="right">Aroy Cafe(kontak)</marquee>
+		</div>
+		<div class="header">
+			<div class="header-logo1"><img height="70" src="https://drive.google.com/uc?export=view&id=1QYqQY_pe76DbuRU8pbLvUxw7UwTsTFz5" width : "70"></div>
+			<div class="header-list">
+				<ul>
+					<a href="Aroy Cafe.html"><li>Home</li></a>
+					<a href="Aroy Cafe(kontak).html"><li>Contact</li></a>
+					<a href="Aroy Cafe(Product).html"><li>Product</li></a>
+					<a href="kalkulator.html"><li>Transaction</li></a>
+				</ul>
+			</div>
+		</div>
+<div class="content form">
+ 		<title>Belajar Tabel</title>
+		<style type="text/css">
+			button {
+				width: 100%;
+				height: 40px;
+				background-color: black;
+				border: none;
+				color: white;
+				padding: 10px;
+				font-size: 16px;
+				cursor: pointer;
+			}
+		</style> 
+	<style>
+	</style>
+	</head>
+	
+<br></br>
+<center>
+<table border="0" width="60%" style="background-color:#787878">
+			<tr style="background-color:white">
+				<th colspan="2">PERHITUNGAN BELANJA</th>
+			</tr>
+			<tr style="background-color:white">
+				<td align="center" colspan="2">Aroy Cafe</td>
+			</tr>
+			<tr>
+				<td>Nama Barang</td>
+				<td><input type="text" id="ipt_namaBarang"></td>
+			</tr>
+			<tr>
+				<td>Harga Barang</td>
+				<td><input type="text" id="ipt_hargaBarang"></td>
+			</tr>
+			<tr>
+				<td>Jumlah Barang</td>
+				<td><input type="text" id="ipt_jumlahBarang"></td>
+			</tr>
+			<tr>
+				<td>Diskon</td>
+				<td><input type="text" id="ipt_diskon"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><button onclick="hitung()">Hitung</button></td>
+			</tr>
+			<tr style="background-color:white">
+			<th colspan="2">HASIL BELANJA</th>
+			</tr>
+			<tr style="background-color:white">
+			<td align="center" colspan="2">Aroy Cafe</td>
+			</tr>
+				<td width="100%">Nama Barang</td>
+				<td><input type="text" id="opt_namaBarang" disabled></td>
+			</tr>
+			<tr>
+				<td>Harga Barang</td>
+				<td><input type="text" id="opt_hargaBarang" disabled></td>
+			</tr>
+			<tr>
+				<td>Jumlah Barang</td>
+				<td><input type="text" id="opt_jumlahBarang" disabled></td>
+			</tr>
+			<tr>
+				<td>Diskon</td>
+				<td><input type="text" id="opt_diskon" disabled></td>
+			</tr>
+			<tr>
+				<td>Total Harga</td>
+				<td><input type="text" id="total_harga" disabled></td>
+			<tr>
+				<td colspan="2"><button onclick="reset()">Reset</button></td>
+			</tr>
+		</table>
+		<script>
+		var namaBarang;
+	    var hargaBarang;
+	    var jumlahBarang;
+	    var diskon;
+		var total_harga;
+		
+		function hitung() {
+			namaBarang = (document.getElementById("ipt_namaBarang").value);
+			hargaBarang = parseFloat(document.getElementById("ipt_hargaBarang").value);
+			jumlahBarang = parseFloat(document.getElementById("ipt_jumlahBarang").value);
+			diskon = parseFloat(document.getElementById("ipt_diskon").value);
+			total_harga = (hargaBarang * jumlahBarang) - (hargaBarang * jumlahBarang * diskon/100);
+			document.getElementById('opt_namaBarang').value = namaBarang;
+			document.getElementById('opt_hargaBarang').value = hargaBarang;
+			document.getElementById('opt_jumlahBarang').value = jumlahBarang;
+			document.getElementById('opt_diskon').value = diskon + "%";
+			document.getElementById('total_harga').value = total_harga;
+			}
+			
+		function reset() {
+			document.getElementById('ipt_namaBarang').value = "";
+			document.getElementById('ipt_hargaBarang').value = "";
+			document.getElementById('ipt_jumlahBarang').value = "";
+			document.getElementById('ipt_diskon').value = "";
+			document.getElementById('opt_namaBarang').value = "";
+			document.getElementById('opt_hargaBarang').value = "";
+			document.getElementById('opt_jumlahBarang').value = "";
+			document.getElementById('opt_diskon').value = "";
+			document.getElementById('total_harga').value = "";
+			}
+
+		</script>
+		
+		<div class="footer">
+		  <div class="foter-list">
+				<ul
+				  <li>@Aroy_Cafe</li>				  
+				</ul>				
+		  </div>
